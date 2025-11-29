@@ -1,73 +1,87 @@
 * {
-  font-family: 'Teko', sans-serif;
+    font-family: "Teko", sans-serif;
 }
 
 body {
-  background-color: ghostwhite;
-  border: solid black 2px;
-  align-items: stretch;
-  box-sizing: content-box;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  position: relative;
-  width: 110px;
-  font-size: 1.3em;
+    background-color: ghostwhite;
+    border: solid black 2px;
+    align-items: stretch;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    width: 300px;
+    font-size: 1.3em;
+    min-height: 400px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 a {
-  text-decoration: none;
-  outline: none;
+    text-decoration: none;
+    outline: none;
 }
 
 a .title:hover {
-  color: transparent;
-  -webkit-text-stroke: 1px red;
+    color: transparent;
+    -webkit-text-stroke: 1px red;
 }
 
 h1 {
-  font-size: 140%;
-  letter-spacing: 1px;
-  padding: 8px 8px 5px 8px;
-  color: black;
-  margin: auto;
-  text-align: center;
-  border: none;
-  outline: none;
+    font-size: 140%;
+    letter-spacing: 1px;
+    padding: 8px 8px 5px 8px;
+    color: black;
+    margin: auto;
+    text-align: center;
+    border: none;
+    outline: none;
 }
 
 h2 {
-  letter-spacing: 3px;
-  padding: 6px 8px 13px 8px;
-  color: red;
-  line-height: 0;
-  margin: auto;
-  text-align: center;
-  border: none;
-  outline: none;
+    letter-spacing: 3px;
+    padding: 6px 8px 13px 8px;
+    color: red;
+    line-height: 0;
+    margin: auto;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.mode-selector {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .mode {
-  color: white;
-  margin: 4px;
-  line-height: 1.2;
-  text-align: center;
-  vertical-align: center;
-  border-radius: 2px;
-  outline: none;
-  transition: all 200ms ease;
-  cursor: pointer;
-  letter-spacing: 1px;
+    color: white;
+    margin: 4px;
+    line-height: 1.2;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 2px;
+    outline: none;
+    transition: all 200ms ease;
+    cursor: pointer;
+    letter-spacing: 1px;
 }
 
 .mode-focus {
     background-color: rgb(2, 126, 227);
     border: solid rgb(2, 126, 227) 1px;
 }
+
 .mode-focus:hover {
-  background-color: white;
-  border: solid rgb(2, 126, 227) 1px;
-  color: rgb(2, 126, 227);
+    background-color: white;
+    border: solid rgb(2, 126, 227) 1px;
+    color: rgb(2, 126, 227);
 }
 
 .mode-brain {
@@ -76,9 +90,20 @@ h2 {
 }
 
 .mode-brain:hover {
-  background-color: white;
-  border: solid rgb(25, 184, 69) 1px;
-  color: rgb(25, 184, 69);
+    background-color: white;
+    border: solid rgb(25, 184, 69) 1px;
+    color: rgb(25, 184, 69);
+}
+
+.mode-study {
+    background-color: rgb(138, 43, 226);
+    border: solid rgb(138, 43, 226) 1px;
+}
+
+.mode-study:hover {
+    background-color: white;
+    border: solid rgb(138, 43, 226) 1px;
+    color: rgb(138, 43, 226);
 }
 
 .mode-default {
@@ -87,7 +112,101 @@ h2 {
 }
 
 .mode-default:hover {
-  background-color: white;
-  border: solid rgba(223, 0, 60, 0.91) 1px;
-  color: rgba(223, 0, 60, 0.91);
+    background-color: white;
+    border: solid rgba(223, 0, 60, 0.91) 1px;
+    color: rgba(223, 0, 60, 0.91);
+}
+
+.options-panel {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.options-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.options-header h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: black;
+}
+
+.toggle-options {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.options-content {
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.options-content.show {
+    display: block;
+}
+
+.option-group {
+    margin-bottom: 15px;
+    padding: 8px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+}
+
+.option-group h4 {
+    margin: 0 0 8px 0;
+    font-size: 0.9em;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 4px;
+}
+
+.option-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.8em;
+    cursor: pointer;
+    color: #555;
+}
+
+.option-group input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.reset-btn,
+.apply-btn {
+    padding: 6px 12px;
+    margin: 4px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-family: "Teko", sans-serif;
+}
+
+.reset-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.reset-btn:hover {
+    background-color: #c82333;
+}
+
+.apply-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.apply-btn:hover {
+    background-color: #218838;
 }

@@ -1,41 +1,334 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="youtube_focus.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap"
-    rel="stylesheet"> 
-  </head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="youtube_focus.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">YOUTUBE</h1>
+            <a
+                href="https://github.com/Jompa14/YouTube_Focus"
+                title="See us at GitHub!"
+                class="YoutubeFocus"
+                target="_blank"
+            >
+                <h2 class="title">FOCUS</h2>
+            </a>
 
-  <body>
-    <h1 class="title">
-      YOUTUBE
-    </h1>
+            <div class="mode-selector">
+                <div
+                    class="mode mode-focus"
+                    title="Allow only 3 suggested videos"
+                >
+                    Focus
+                </div>
+                <div
+                    class="mode mode-brain"
+                    title="Disable all the recommendations"
+                >
+                    Brain
+                </div>
+                <div
+                    class="mode mode-study"
+                    title="Study mode with minimal distractions"
+                >
+                    Study
+                </div>
+                <div
+                    class="mode mode-default"
+                    title="Allow the recommendations"
+                >
+                    Default
+                </div>
+            </div>
 
-    <a
-      href="https://github.com/Jompa14/YouTube_Focus"
-      title="See us at GitHub!"
-      class="YoutubeFocus"
-      target="_blank"
-    >
-      <h2 class="title">
-        FOCUS
-      </h2>
-    </a>
+            <div class="options-panel" id="optionsPanel">
+                <div class="options-header">
+                    <h3>Options</h3>
+                    <button class="toggle-options" id="toggleOptions">
+                        ⚙️
+                    </button>
+                </div>
 
-    <div class="mode mode-focus" title="Allow only 3 suggested videos">
-      Focus
-    </div>
-    <div class="mode mode-brain" title="Disable all the recommendations">
-      Brain
-    </div>
-    <div class="mode mode-default" title="Allow the recommendations">
-      Default
-    </div>
+                <div class="options-content" id="optionsContent">
+                    <div class="option-group">
+                        <h4>Navigation</h4>
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="redirectToPlaylists"
+                                checked
+                            />
+                            Redirect Home to Playlists</label
+                        >
+                    </div>
 
-    <script src="youtube_focus.js"></script>
-  </body>
+                    <div class="option-group">
+                        <h4>Home & Feed</h4>
+                        <label
+                            ><input type="checkbox" id="hideHome" checked />
+                            Hide Home Page</label
+                        >
+                        <label
+                            ><input type="checkbox" id="hideTrending" checked />
+                            Hide Trending</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideWhatToWatch"
+                                checked
+                            />
+                            Hide What to Watch</label
+                        >
+                    </div>
 
+                    <div class="option-group">
+                        <h4>Video Player</h4>
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideEndscreen"
+                                checked
+                            />
+                            Hide End Screen</label
+                        >
+                        <label
+                            ><input type="checkbox" id="hideFooter" checked />
+                            Hide Footer</label
+                        >
+                    </div>
+
+                    <div class="option-group">
+                        <h4>Sidebar & Related</h4>
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideRelatedContents"
+                                checked
+                            />
+                            Hide Related Contents</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideRelatedUpnext"
+                                checked
+                            />
+                            Hide Up Next</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideRelatedItems"
+                                checked
+                            />
+                            Hide Related Items</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideCompactVideo"
+                                checked
+                            />
+                            Hide Compact Videos</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideCompactPlaylist"
+                                checked
+                            />
+                            Hide Compact Playlists</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideCompactRadio"
+                                checked
+                            />
+                            Hide Compact Radio</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideWatchSidebar"
+                                checked
+                            />
+                            Hide Watch Sidebar</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideSecondaryResults"
+                                checked
+                            />
+                            Hide Secondary Results</label
+                        >
+                    </div>
+
+                    <div class="option-group">
+                        <h4>Navigation & UI</h4>
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideGuideButton"
+                                checked
+                            />
+                            Hide Guide Button</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideVoiceSearch"
+                                checked
+                            />
+                            Hide Voice Search</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideNotifications"
+                                checked
+                            />
+                            Hide Notifications</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideAvatarButton"
+                                checked
+                            />
+                            Hide Avatar Button</label
+                        >
+                    </div>
+
+                    <div class="option-group">
+                        <h4>Guide Sections</h4>
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideGuideSection2"
+                                checked
+                            />
+                            Hide Guide Section 2</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideGuideSection4"
+                                checked
+                            />
+                            Hide Guide Section 4</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideGuideSection5"
+                                checked
+                            />
+                            Hide Guide Section 5</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideGuideSection6"
+                                checked
+                            />
+                            Hide Guide Section 6</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideGuideEntry2"
+                                checked
+                            />
+                            Hide Guide Entry 2</label
+                        >
+                    </div>
+
+                    <div class="option-group">
+                        <h4>Menu Sections</h4>
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideMenuSection1"
+                                checked
+                            />
+                            Hide Menu Section 1</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideMenuSection2"
+                                checked
+                            />
+                            Hide Menu Section 2</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideMenuSection3"
+                                checked
+                            />
+                            Hide Menu Section 3</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideMenuSection5"
+                                checked
+                            />
+                            Hide Menu Section 5</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="hideCompactLink1"
+                                checked
+                            />
+                            Hide Compact Link 1</label
+                        >
+                    </div>
+
+                    <div class="option-group">
+                        <h4>Layout</h4>
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="expandPrimary"
+                                checked
+                            />
+                            Expand Primary Column</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="limitRelatedVideos"
+                                checked
+                            />
+                            Limit Related Videos (Focus Mode)</label
+                        >
+                    </div>
+
+                    <div class="option-group">
+                        <h4>Actions</h4>
+                        <button class="reset-btn" id="resetOptions">
+                            Reset to Default
+                        </button>
+                        <button class="apply-btn" id="applyOptions">
+                            Apply Changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="youtube_focus.js"></script>
+    </body>
 </html>

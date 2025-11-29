@@ -9,7 +9,7 @@
     "gecko": {
       "id": "youtube-focus-forked@erenaydev.proton.me",
       "data_collection_permissions": {
-        "required": "none"
+        "required": ["none"]
       }
     }
   },
@@ -19,19 +19,12 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "*://*.youtube.com/*"
-      ],
-      "js": [
-        "inject.js"
-      ],
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["inject.js"],
       "run_at": "document_start"
     }
   ],
-  "permissions": [
-    "*://*.youtube.com/*",
-    "storage"
-  ],
+  "permissions": ["*://*.youtube.com/*", "storage"],
   "browser_action": {
     "default_icon": "button/Focus48.png",
     "default_title": "YouTube Focus (Forked)",
